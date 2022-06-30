@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Calender from './components/Calender/Calender';
+import Footer from './components/Calender/Footer/Footer';
 import CompleteTask from './components/CompleteTask/CompleteTask';
 import Home from './components/Home/Home';
 import Navbar from './components/Navbar/Navbar';
@@ -18,6 +19,7 @@ function App() {
         <Route path='/completetask' element={<CompleteTask></CompleteTask>}></Route>
         <Route path='/calender' element={<Calender></Calender>}></Route>
       </Routes>
+      <Footer></Footer>
     </div>
   );
 }
