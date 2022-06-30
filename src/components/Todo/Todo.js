@@ -1,9 +1,10 @@
 import React from 'react';
+import AddTask from './AddTask';
 
 const Todo = () => {
     return (
-        <div>
-
+        <div className='container'>
+            <AddTask></AddTask>
         </div>
     );
 };

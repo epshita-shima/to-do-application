@@ -10,6 +10,7 @@ import Todo from './components/Todo/Todo';
 
 
 function App() {
+
   return (
     <div>
       <Navbar></Navbar>
