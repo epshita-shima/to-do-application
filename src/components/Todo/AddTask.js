@@ -7,7 +7,7 @@ const AddTask = () => {
         console.log(task);
         const taskDetail = { task };
 
-        fetch('http://localhost:5000/task', {
+        fetch('https://boiling-fortress-00507.herokuapp.com/task', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

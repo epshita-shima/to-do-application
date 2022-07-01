@@ -18,8 +18,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/todo' element={<Todo></Todo>}></Route>
-        <Route path='/completetask/taskId' element={<CompleteTask></CompleteTask>}></Route>
-        <Route path='/update' element={<UpdateTask></UpdateTask>}></Route>
+        <Route path='/completetask/:taskId' element={<CompleteTask></CompleteTask>}></Route>
+        <Route path='/update/:id' element={<UpdateTask></UpdateTask>}></Route>
         <Route path='/calender' element={<Calender></Calender>}></Route>
       </Routes>
       <Footer></Footer>

@@ -5,7 +5,7 @@ const Navbar = () => {
 
         <li className='text-primary font-bold text-xl'><Link to='/'>Home</Link></li>
         <li className='text-primary font-bold text-xl'><Link to='/todo'>To Do</Link></li>
-        <li className='text-primary font-bold text-xl'><Link to='/completetask/taskId'>Complete Task</Link></li>
+        <li className='text-primary font-bold text-xl'><Link to='/completetask'>Complete Task</Link></li>
         <li className='text-primary font-bold text-xl'><Link to='/calender'>Calender</Link></li>
 
     </>
