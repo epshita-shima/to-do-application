@@ -11,10 +11,26 @@ const Todo = () => {
             .then(res => res.json())
             .then(data => setTask(data));
     }, [tasks])
-    console.log(tasks);
-    const handleTaskComplete = () => {
+    // console.log(tasks);
 
+    const handleTaskComplete = (event, _id) => {
+        const checkedTask = event.target.checked;
+        console.log(checkedTask);
+        console.log('set selectted', selectedTask);
+
+        fetch(`http://localhost:5000/completed/${_id}`, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log('Success:', data);
+            })
     }
+
     return (
         <div className='container mx-auto '>
 
@@ -28,8 +44,9 @@ const Todo = () => {
                     <tbody>
                         {
                             tasks.map((t) => <tr className='flex justify-between items-center'>
-                                <input type="checkbox" id="data" class="checkbox" /><td>{t.task}</td>
-
+                                <input type="checkbox" onChange={(event) => handleTaskComplete(event, t._id)}
+                                    class="checkbox" />
+                                <td>{t.task}</td>
                                 <label for="my-modal-6"
                                     onClick={() => setSetectedTask(t)}
                                     className='btn btn-primary'>Edit</label>

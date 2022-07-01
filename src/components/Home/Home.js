@@ -16,9 +16,10 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className='conatiner '>
+            <div className='conatiner mt-20'>
+                <h2 className='text-3xl font-bold text-center mb-4'>Taking notes</h2>
                 <Todo></Todo>
-                <Calender></Calender>
+
             </div>
         </div>
     );

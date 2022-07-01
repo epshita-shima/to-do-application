@@ -10,7 +10,7 @@ const Navbar = () => {
 
     </>
     return (
-        <div class="navbar shadow bg-base-100">
+        <div class="navbar shadow bg-base-100 container mx-auto">
             <div class="navbar-start">
                 <div class="dropdown">
                     <label tabindex="0" class="btn btn-ghost lg:hidden">
@@ -20,12 +20,15 @@ const Navbar = () => {
                         {menuItem}
                     </ul>
                 </div>
-                <a class="btn btn-ghost normal-case text-xl"></a>
+                <a class="btn btn-ghost normal-case text-xl text-primary font-bold">WorkingNotes</a>
             </div>
             <div class="navbar-start hidden lg:flex ">
                 <ul class="menu menu-horizontal p-0  ">
                     {menuItem}
                 </ul>
+            </div>
+            <div class="navbar-end">
+                <a class="btn btn-primary text-white">Get started</a>
             </div>
         </div>
     );
