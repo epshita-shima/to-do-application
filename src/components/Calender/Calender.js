@@ -13,9 +13,9 @@ const Calender = () => {
                     selected={date}
                     onSelect={setDate}
                 ></DayPicker>
-
+                <p className='text-center'>You have selected: {date && format(date, 'PP')}</p>
             </div>
-            <p>You have selected: {date && format(date, 'PP')}</p>
+
         </div>
     );
 };

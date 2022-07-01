@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-const CompleteTask = () => {
+const UpdateTask = () => {
     const { taskId } = useParams();
 
     const [completeTask, setCompleteTask] = useState([]);
@@ -11,12 +11,11 @@ const CompleteTask = () => {
             .then(res => res.json())
             .then(data => setCompleteTask(data))
     }, [])
-
     return (
-        <div className='container mx-auto'>
-            <h2 className='text-2xl'>This is complete task:{taskId}</h2>
+        <div>
+            <h2>Update task</h2>
         </div>
     );
 };
 
-export default CompleteTask;
+export default UpdateTask;
