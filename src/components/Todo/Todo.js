@@ -3,18 +3,16 @@ import AddTask from './AddTask';
 import UpdateTask from './UpdateTask';
 
 const Todo = () => {
-    const [task, setTask] = useState([]);
+    const [tasks, setTask] = useState([]);
+    const [selectedTask, setSetectedTask] = useState({});
 
     useEffect(() => {
-        fetch('https://boiling-fortress-00507.herokuapp.com/task')
+        fetch('http://localhost:5000/task')
             .then(res => res.json())
             .then(data => setTask(data));
-    }, [])
-
+    }, [tasks])
+    console.log(tasks);
     const handleTaskComplete = () => {
-
-    }
-    const handelUpdateModal = () => {
 
     }
     return (
@@ -29,16 +27,18 @@ const Todo = () => {
                     </thead>
                     <tbody>
                         {
-                            task.map((t) => <tr className='flex justify-between items-center'>
-                                <input type="checkbox" onClick={handleTaskComplete} id="data" class="checkbox" /><td>{t.task}</td>
+                            tasks.map((t) => <tr className='flex justify-between items-center'>
+                                <input type="checkbox" id="data" class="checkbox" /><td>{t.task}</td>
 
                                 <label for="my-modal-6"
-                                    onClick={() => handelUpdateModal(t._id)}
+                                    onClick={() => setSetectedTask(t)}
                                     className='btn btn-primary'>Edit</label>
                             </tr>)
                         }
                         {
-                            setTask && <UpdateTask setTask={setTask}></UpdateTask>
+                            <UpdateTask
+                                task={selectedTask}
+                            ></UpdateTask>
                         }
                     </tbody>
                 </table>

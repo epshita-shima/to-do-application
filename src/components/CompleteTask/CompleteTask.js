@@ -7,7 +7,7 @@ const CompleteTask = () => {
     const [completeTask, setCompleteTask] = useState([]);
     const { taskId } = useParams();
     useEffect(() => {
-        fetch(`https://boiling-fortress-00507.herokuapp.com/task/${taskId}`)
+        fetch(`http://localhost:5000/task/${taskId}`)
             .then(res => res.json())
             .then(data => setCompleteTask(data))
     }, [])

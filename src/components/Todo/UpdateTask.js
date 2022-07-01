@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-const UpdateTask = () => {
-    const { id } = useParams();
+const UpdateTask = ({ task }) => {
+    const { _id } = task;
     const handleUpdate = event => {
         event.preventDefault();
-        const updateTask = event.target.name.value;
+        const updateTask = event.target.task.value;
         console.log(updateTask);
-        const updateValue = { updateTask };
+        const updateValue = { task: updateTask };
 
-        fetch(`https://boiling-fortress-00507.herokuapp.com/task/${id}`, {
+        fetch(`http://localhost:5000/task/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -29,7 +29,7 @@ const UpdateTask = () => {
                 <div class="modal-box">
                     <label for="my-modal-6" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
                     <form onSubmit={handleUpdate}>
-                        <input type="text" name='name' placeholder="update task" class="input input-bordered input-primary w-full" />
+                        <input type="text" name='task' placeholder="update task" class="input input-bordered input-primary w-full" />
                     </form>
                 </div>
             </div>
