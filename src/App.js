@@ -13,11 +13,11 @@ import UpdateTask from './components/Todo/UpdateTask';
 function App() {
 
   return (
-    <div>
+    <div className='bg-white'>
       <Navbar></Navbar>
       <Routes>
-        <Route path='/' element={<Home></Home>}></Route>
-        <Route path='/todo' element={<Todo></Todo>}></Route>
+        {/* <Route path='/' element={<Home></Home>}></Route> */}
+        <Route path='/' element={<Todo></Todo>}></Route>
         <Route path='/completetask' element={<CompleteTask></CompleteTask>}></Route>
         <Route path='/update/:id' element={<UpdateTask></UpdateTask>}></Route>
         <Route path='/calender' element={<Calender></Calender>}></Route>

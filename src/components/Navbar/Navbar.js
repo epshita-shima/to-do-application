@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
     const menuItem = <>
 
-        <li className='text-primary font-bold text-xl'><Link to='/'>Home</Link></li>
-        <li className='text-primary font-bold text-xl'><Link to='/todo'>To Do</Link></li>
+        <li className='text-primary font-bold text-xl'><Link to='/'>ToDo List</Link></li>
+        {/* <li className='text-primary font-bold text-xl'><Link to='/todo'>To Do</Link></li> */}
         <li className='text-primary font-bold text-xl'><Link to='/completetask'>Complete Task</Link></li>
         <li className='text-primary font-bold text-xl'><Link to='/calender'>Calender</Link></li>
 
     </>
     return (
-        <div class="navbar shadow bg-base-100 container mx-auto">
+        <div class="navbar shadow bg-green-100 container mx-auto">
             <div class="navbar-start">
                 <div class="dropdown">
                     <label tabindex="0" class="btn btn-ghost lg:hidden">
@@ -27,9 +27,9 @@ const Navbar = () => {
                     {menuItem}
                 </ul>
             </div>
-            <div class="navbar-end">
+            {/* <div class="navbar-end">
                 <a class="btn btn-primary text-white">Get started</a>
-            </div>
+            </div> */}
         </div>
     );
 };

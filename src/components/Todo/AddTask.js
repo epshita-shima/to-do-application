@@ -7,7 +7,7 @@ const AddTask = () => {
         console.log(task);
         const taskDetail = { task };
 
-        fetch('http://localhost:5000/task', {
+        fetch('https://to-to-application-server.onrender.com/task', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -25,7 +25,7 @@ const AddTask = () => {
         <div className='container mt-10'>
             <div className='flex justify-center'>
                 <form onSubmit={handleAddTask}>
-                    <input type="text" name='name' placeholder="Type here" class="input input-bordered input-primary w-full" />
+                    <input type="text" name='name' placeholder="add task" class="input input-bordered bg-emerald-200 placeholder-black w-[100%]" />
                 </form>
             </div>
         </div>
